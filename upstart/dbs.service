@@ -1,0 +1,25 @@
+[Unit]
+Description=TEST Project. Meteor.js (NodeJS) application
+Documentation=man:meteor(1)
+
+[Service]
+Group=test
+User=test
+Restart=on-failure
+Type=forking
+Environment=NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+Environment=PWD=/home/test
+Environment=HOME=/home/test
+Environment=BIND_IP=127.0.0.1
+Environment=PORT=8080
+Environment=HTTP_FORWARDED_COUNT=1
+Environment=MONGO_URL='mongodb://user:password@localhost:27017/test'
+Environment=ROOT_URL='http://test'
+ExecStartPre=
+ExecStart=/usr/local/bin/meteor node /home/test/app/build/bundle/main.js > /var/log/test/test.log
+
+[Install]
+WantedBy=multi-user.target
+
+
+
