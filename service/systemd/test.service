@@ -6,7 +6,7 @@ Documentation=man:meteor(1)
 Group=test
 User=test
 Restart=on-failure
-Type=forking
+Type=simple
 Environment=NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
 Environment=PWD=/home/test
 Environment=HOME=/home/test
@@ -17,6 +17,7 @@ Environment=MONGO_URL='mongodb://user:password@localhost:27017/test'
 Environment=ROOT_URL='http://test'
 ExecStartPre=
 ExecStart=/usr/local/bin/meteor node /home/test/app/build/bundle/main.js > /var/log/test/test.log
+TimeoutSec=infinity
 
 [Install]
 WantedBy=multi-user.target
