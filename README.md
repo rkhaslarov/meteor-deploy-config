@@ -43,7 +43,7 @@ netstat -ln | grep -E '27017|28017';
 ```
 
 
-## 3) Installing the NodeJS Application (as a example I used Meteor JS)
+## 3) Installing the NodeJS Application (Meteor as an example)
 
 ```bash
 curl https://install.meteor.com | /bin/sh
