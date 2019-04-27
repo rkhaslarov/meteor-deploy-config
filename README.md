@@ -1,4 +1,4 @@
-# Meteor Deploy Configuration
+# NodeJS Deployment Configuration
 
 ## 1) Setting Up an Nginx Web Server
 
@@ -43,7 +43,7 @@ netstat -ln | grep -E '27017|28017';
 ```
 
 
-## 3) Installing the Meteor Application
+## 3) Installing the NodeJS Application (as a example I used Meteor JS)
 
 ```bash
 curl https://install.meteor.com | /bin/sh
